@@ -1,123 +1,461 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
 
-      body {
-    background-image: url("imeges/background3.avif");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+  <meta charset="UTF-8">
+
+  <!-- Mobile Responsive -->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>About Us</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  >
+
+  <style>
+
+    /* ================= BODY ================= */
+
+    body {
+      margin: 0;
+      padding: 0;
+
+      background-image: url("imeges/background3.avif");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+
+      font-family: Arial, sans-serif;
     }
 
-    p{
-    background-color:yellow;
+
+    /* ================= NAVBAR ================= */
+
+    .bg-purple {
+      background-color: blueviolet;
     }
 
-      h3{
-        text-align:center;
-      }
-      .bg-purple{
-      background-color:blueviolet;
+    .navbar .nav-link {
+      color: white !important;
+      padding: 10px 15px;
+      margin: 2px;
+      border-radius: 5px;
+      transition: 0.3s;
     }
-    .nav-item:hover{
-      background-color:red;
+
+    .navbar .nav-link:hover {
+      background-color: red;
       border: 2px solid yellow;
     }
-    </style>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    .navbar .nav-link.active {
+      background-color: red !important;
+      border: 2px solid yellow;
+    }
+
+    .navbar-toggler {
+      background-color: white;
+    }
+
+
+    /* ================= ABOUT SECTION ================= */
+
+    .about-section {
+      padding: 50px 0;
+      min-height: calc(100vh - 70px);
+    }
+
+
+    /* About Card */
+
+    .about-card {
+      background-color: rgba(255, 255, 0, 0.92);
+
+      padding: 35px;
+
+      border-radius: 15px;
+
+      box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.35);
+    }
+
+
+    /* Heading */
+
+    .about-card h3 {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 25px;
+      color: black;
+    }
+
+
+    /* Paragraph */
+
+    .about-card p {
+      background: transparent;
+
+      color: black;
+
+      font-size: 17px;
+
+      line-height: 1.8;
+
+      text-align: justify;
+
+      margin: 0;
+    }
+
+
+    /* ================= MOBILE VIEW ================= */
+
+    @media (max-width: 767px) {
+
+      body {
+        background-attachment: scroll;
+        background-position: center;
+      }
+
+
+      /* Navbar */
+
+      .navbar .nav-link {
+        padding: 8px 12px;
+        margin: 2px 0;
+      }
+
+
+      .navbar form {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+
+      .navbar form input {
+        width: 100%;
+      }
+
+
+      .navbar form button {
+        white-space: nowrap;
+      }
+
+
+      /* About section */
+
+      .about-section {
+        padding: 25px 10px;
+      }
+
+
+      /* About card */
+
+      .about-card {
+        padding: 20px 15px;
+
+        border-radius: 10px;
+
+        background-color: rgba(255, 255, 0, 0.95);
+      }
+
+
+      /* Heading */
+
+      .about-card h3 {
+        font-size: 26px;
+
+        margin-bottom: 18px;
+      }
+
+
+      /* Paragraph */
+
+      .about-card p {
+        font-size: 15px;
+
+        line-height: 1.7;
+
+        text-align: justify;
+      }
+
+    }
+
+  </style>
+
 </head>
-<body style="background-image: url('imeges/background3.avif');">
-    <!-- Header start -->
-    <header>
-        <nav class="navbar navbar-expand-lg bg-purple">
-  <div class="container-fluid ">
-
-    <img src="imeges/logo8.png" alt="Logo" width="40" height="20" class="d-inline-block align-text-top"></a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-        <li class="nav-item">
-          <a class="nav-link" href="properties.html">Properties</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="chikhali.html">Buy</a>
-        </li>
 
 
-        <li class="nav-item">
-          <a class="nav-link" href="Ravet.html">Rent</a>
-        </li>
+<body>
+
+
+<!-- ================================================= -->
+<!-- HEADER START -->
+<!-- ================================================= -->
+
+<header>
+
+  <nav class="navbar navbar-expand-lg bg-purple">
+
+    <div class="container-fluid">
+
+
+      <!-- Logo -->
+
+      <a
+        class="navbar-brand"
+        href="properties.html"
+      >
+
+        <img
+          src="imeges/logo8.png"
+          alt="Logo"
+          width="50"
+          height="30"
+        >
+
+      </a>
+
+
+      <!-- Mobile Menu Button -->
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+
+      <!-- Navbar Menu -->
+
+      <div
+        class="collapse navbar-collapse"
+        id="navbarSupportedContent"
+      >
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
 
           <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
+
+            <a
+              class="nav-link"
+              href="properties.html"
+            >
+              Properties
+            </a>
+
+          </li>
+
 
           <li class="nav-item">
-          <a class="nav-link active bg-danger border border-warning" href="#">About Us</a>
-        </li>
 
-        </li>
-         </ul>
+            <a
+              class="nav-link"
+              href="chikhali.html"
+            >
+              Buy
+            </a>
 
-    
+          </li>
 
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
 
-    </div>
-  </div>
-</nav>
-    </header>
-    <!-- Header End  -->
+          <li class="nav-item">
 
-    <section class="mt-3">
-    <div class="container">
-      <div class="row">
-         <h3 style="color:black;">About Us</h3>
-        <p>
-                
-Welcome to, your trusted partner for finding the right residential property in some of the fastest-growing and 
-well-connected areas of Pune. We specialize in 1 BHK properties for sale in Chikhali and Moshi, as well as
-1 BHK properties available for rent in Akurdi and Ravet. Our objective is to make the process of buying, 
-selling, and renting a home simple, transparent, and convenient for every customer. We understand that a home is 
-one of the most important decisions in a person's life, and therefore, we take the time to understand your 
-requirements, budget, preferred location, and lifestyle before suggesting suitable properties. with our knowledge
- of the local real estate market, we focus on providing customers with genuine and practical property options. 
- Whether you are a first-time homebuyer searching for an affordable 1 BHK in Chikhali or Moshi, an investor 
- ooking for a promising property, or a working professional and family searching for a comfortable 1 BHK rental
- in Akurdi or Ravet, we are here to assist you at every step. We believe that customers should have access to 
- clear property information and straightforward guidance, without unnecessary complications or confusion.
-Our approach is built around trust, transparency, customer satisfaction, and long-term relationships We aim not 
-only to help you find a property but also to make your entire experience smooth—from understanding your 
-requirements and exploring suitable options to arranging property visits and assisting with the overall 
-transaction process. We believe every customer deserves personalized attention, honest communication, and, we 
-continuously work to understand changing market trends and provide property options that offer value, convenience,
-and potential for the future. Our commitment is to become a dependable name for customers looking for 1 BHK homes 
-for sale and rent in these locations. Whether you are buying your first home, planning an investment, or looking 
-for a rental property, you can count on us to guide you with professionalism and dedication. At, we don't simply 
-deal in properties—we help people find homes, make confident decisions, and take the next step toward a better 
-future.
+            <a
+              class="nav-link"
+              href="Ravet.html"
+            >
+              Rent
+            </a>
 
-        </p>
+          </li>
+
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link"
+              href="contact.html"
+            >
+              Contact
+            </a>
+
+          </li>
+
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link active"
+              href="about.html"
+            >
+              About Us
+            </a>
+
+          </li>
+
+        </ul>
+
+
+        <!-- Search -->
+
+        <form
+          class="d-flex"
+          role="search"
+        >
+
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          >
+
+          <button
+            class="btn btn-outline-light"
+            type="submit"
+          >
+            Search
+          </button>
+
+        </form>
 
       </div>
+
     </div>
-    </section>
+
+  </nav>
+
+</header>
+
+<!-- HEADER END -->
 
 
-    
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<!-- ================================================= -->
+<!-- ABOUT SECTION -->
+<!-- ================================================= -->
+
+<section class="about-section">
+
+  <div class="container">
+
+    <div class="row justify-content-center">
+
+      <div class="col-12 col-lg-10">
+
+        <div class="about-card">
+
+          <h3>
+            About Us
+          </h3>
+
+
+          <p>
+
+            Welcome to our trusted property platform, your trusted
+            partner for finding the right residential property in some
+            of the fastest-growing and well-connected areas of Pune.
+
+            We specialize in 1 BHK properties for sale in Chikhali and
+            Moshi, as well as 1 BHK properties available for rent in
+            Akurdi and Ravet.
+
+            Our objective is to make the process of buying, selling,
+            and renting a home simple, transparent, and convenient
+            for every customer.
+
+            We understand that a home is one of the most important
+            decisions in a person's life, and therefore, we take the
+            time to understand your requirements, budget, preferred
+            location, and lifestyle before suggesting suitable
+            properties.
+
+            With our knowledge of the local real estate market, we
+            focus on providing customers with genuine and practical
+            property options.
+
+            Whether you are a first-time homebuyer searching for an
+            affordable 1 BHK in Chikhali or Moshi, an investor looking
+            for a promising property, or a working professional and
+            family searching for a comfortable 1 BHK rental in Akurdi
+            or Ravet, we are here to assist you at every step.
+
+            We believe that customers should have access to clear
+            property information and straightforward guidance,
+            without unnecessary complications or confusion.
+
+            Our approach is built around trust, transparency,
+            customer satisfaction, and long-term relationships.
+
+            We aim not only to help you find a property but also to
+            make your entire experience smooth—from understanding
+            your requirements and exploring suitable options to
+            arranging property visits and assisting with the overall
+            transaction process.
+
+            We believe every customer deserves personalized attention
+            and honest communication.
+
+            We continuously work to understand changing market trends
+            and provide property options that offer value,
+            convenience, and potential for the future.
+
+            Our commitment is to become a dependable name for
+            customers looking for 1 BHK homes for sale and rent in
+            these locations.
+
+            Whether you are buying your first home, planning an
+            investment, or looking for a rental property, you can
+            count on us to guide you with professionalism and
+            dedication.
+
+            At our property platform, we don't simply deal in
+            properties—we help people find homes, make confident
+            decisions, and take the next step toward a better future.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ABOUT SECTION END -->
+
+
+<!-- Bootstrap JavaScript -->
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+  crossorigin="anonymous">
+</script>
+
 </body>
 </html>
+```
