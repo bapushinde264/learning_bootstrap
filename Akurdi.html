@@ -1,197 +1,622 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=initial-scale=1.0">
-    <title></title>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> 
-     
-      <style>
-    
-    .card{
-      height:450px;
+
+  <meta charset="UTF-8">
+
+  <!-- Mobile responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Akurdi 1 BHK Rental Property</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  >
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+  >
+
+  <style>
+
+    /* ================= GENERAL ================= */
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
     }
-    .bg-purple{
-      background-color:blueviolet;
+
+
+    /* ================= NAVBAR ================= */
+
+    .bg-purple {
+      background-color: blueviolet;
     }
-    .nav-item:hover{
-      background-color:red;
+
+    .navbar .nav-link {
+      color: white !important;
+      padding: 10px 15px;
+      margin: 2px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .navbar .nav-link:hover {
+      background-color: red;
       border: 2px solid yellow;
     }
 
-    .card-body{
-      display:flex;
-      flex-direction:column;
+    .navbar .nav-link.active {
+      background-color: red !important;
+      border: 2px solid yellow;
+    }
+
+    .navbar-toggler {
+      background-color: white;
+    }
+
+
+    /* ================= PROPERTY SECTION ================= */
+
+    .property-section {
+      padding: 40px 0;
+    }
+
+    .property-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .property-content {
+      padding: 15px;
+    }
+
+    .property-content h2 {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .property-content p {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+
+    /* ================= REGISTER BUTTON ================= */
+
+    .register-btn {
+      display: inline-block;
+      padding: 10px 25px;
+      background-color: blueviolet;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .register-btn:hover {
+      background-color: #5d179c;
+      color: white;
+    }
+
+
+    /* ================= PAGINATION ================= */
+
+    .pagination {
+      margin-top: 30px;
+    }
+
+
+    /* ================= MOBILE VIEW ================= */
+
+    @media (max-width: 767px) {
+
+      /* Navbar */
+
+      .navbar .nav-link {
+        padding: 8px 12px;
+        margin: 2px 0;
       }
 
-      .card-text{
-        height: 96px;
-        overflow:hidden;
-        line-height:24px;
+      .navbar form {
+        margin-top: 10px;
+        margin-bottom: 10px;
       }
 
-       .card-body.btn{
-        margin-top:auto;
-      } 
-
-      .kitchen-img{
-        height: 82vh;
-       width: 100%;
-       object-fit: contain;
-       display:block;
+      .navbar form input {
+        width: 100%;
       }
-   
-</style> 
+
+      .navbar form button {
+        white-space: nowrap;
+      }
+
+
+      /* Property section */
+
+      .property-section {
+        padding: 25px 10px;
+      }
+
+
+      /* Image */
+
+      .property-img {
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+
+      /* Text */
+
+      .property-content {
+        padding: 15px 5px;
+      }
+
+      .property-content h2 {
+        font-size: 24px;
+        margin-top: 10px;
+      }
+
+      .property-content p {
+        font-size: 15px;
+        line-height: 1.6;
+        text-align: justify;
+      }
+
+
+      /* Register button */
+
+      .register-btn {
+        width: 100%;
+        text-align: center;
+      }
+
+    }
+
+  </style>
+
 </head>
+
+
 <body>
 
-    </head>
-<body>
-    <!-- Header start -->
-    <header>
-        <nav class="navbar navbar-expand-lg bg-purple">
-  <div class="container-fluid">
 
-    <img src="imeges/logo8.png" alt="Logo" width="40" height="20" class="d-inline-block align-text-top"></a>
+<!-- ================================================= -->
+<!-- HEADER START -->
+<!-- ================================================= -->
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<header>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+  <nav class="navbar navbar-expand-lg bg-purple">
 
-        <li class="nav-item">
-          <a class="nav-link" href="properties.html">Properties</a>
-        </li>
+    <div class="container-fluid">
 
-        <li class="nav-item">
-          <a class="nav-link" href="chikhali.html">Buy</a>
-        </li>
+      <!-- Logo -->
 
-         <!-- <li class="nav-item">
-          <a class="nav-link" href="services.html">Services</a>
-        </li> -->
+      <a
+        class="navbar-brand"
+        href="properties.html"
+      >
 
-        <li class="nav-item">
-          <a class="nav-link active bg-danger border border-warning" href="rent.html">Rent</a>
-        </li>
+        <img
+          src="imeges/logo8.png"
+          alt="Logo"
+          width="50"
+          height="30"
+        >
 
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
+      </a>
+
+
+      <!-- Mobile Menu Button -->
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+
+      <!-- Navbar Menu -->
+
+      <div
+        class="collapse navbar-collapse"
+        id="navbarSupportedContent"
+      >
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
 
           <li class="nav-item">
-          <a class="nav-link" href="about.html">About Us</a>
-        </li>
 
-      </li>
-    </ul>
+            <a
+              class="nav-link"
+              href="properties.html"
+            >
+              Properties
+            </a>
 
-    
+          </li>
 
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link"
+              href="chikhali.html"
+            >
+              Buy
+            </a>
+
+          </li>
+
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link active"
+              href="rent.html"
+            >
+              Rent
+            </a>
+
+          </li>
+
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link"
+              href="contact.html"
+            >
+              Contact
+            </a>
+
+          </li>
+
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link"
+              href="about.html"
+            >
+              About Us
+            </a>
+
+          </li>
+
+        </ul>
+
+
+        <!-- Search -->
+
+        <form
+          class="d-flex"
+          role="search"
+        >
+
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          >
+
+          <button
+            class="btn btn-outline-light"
+            type="submit"
+          >
+            Search
+          </button>
+
+        </form>
+
+      </div>
 
     </div>
+
+  </nav>
+
+</header>
+
+<!-- HEADER END -->
+
+
+<!-- ================================================= -->
+<!-- HALL SECTION START -->
+<!-- ================================================= -->
+
+<section class="property-section bg-warning">
+
+  <div class="container">
+
+    <div class="row align-items-center">
+
+
+      <!-- Image -->
+
+      <div class="col-md-5 mb-3 mb-md-0">
+
+        <img
+          src="imeges/Ravet_kitchen.jpeg"
+          alt="Akurdi Apartment Hall"
+          class="property-img"
+        >
+
+      </div>
+
+
+      <!-- Content -->
+
+      <div class="col-md-7">
+
+        <div class="property-content">
+
+          <h2>
+            Spacious & Comfortable Hall
+          </h2>
+
+
+          <p>
+            <i class="bi bi-geo-alt-fill text-danger"></i>
+            Akurdi, Pune
+          </p>
+
+
+          <p>
+            The 1 BHK apartment in Akurdi features a spacious and
+            well-designed hall that offers a comfortable and welcoming
+            space for everyday living. The hall provides enough room
+            for a sofa set, TV unit, center table, and other essential
+            furniture, making it ideal for relaxing with family or
+            spending quality time with friends.
+          </p>
+
+
+          <p>
+            Large windows allow plenty of natural light and fresh air
+            into the room, creating a bright and pleasant atmosphere
+            throughout the day. The practical layout of the hall also
+            provides easy movement and can be arranged according to
+            your personal style and requirements.
+          </p>
+
+
+          <a
+            href="contact.html"
+            class="register-btn"
+          >
+            Register
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
-</nav>
-    </header>
-    <!-- Header End  -->
 
- 
-     <!-- Hall section start -->
-       <section class="mt- bg-warning">
-        <div class="container-flued">
-          <div class="row">
-            <div class="col-md-5 p-3">
-              <img src="imeges/Ravet_kitchen.jpeg" alt="" class="img-fluid kitchen-img" />
-            </div>
-            <div class="col-md-7 p-3">
-              <h2> Spacious & Comfortable Hall</h2> 
-               <p> <i class="bi bi-geo-alt-fill text-danger"></i>Akurdi, Pune</p>    
-             <p>  
-The 1 BHK apartment in Ravet features a spacious and well-designed hall that offers a comfortable 
-and welcoming space for everyday living. The hall provides enough room for a sofa set, TV unit,
-center table, and other essential furniture, making it ideal for relaxing with family or spending
-quality time with friends. Large windows allow plenty of natural light and fresh air into the room,
-creating a bright and pleasant atmosphere throughout the day. The practical layout of the hall
-also provides easy movement and can be arranged according to your personal style and requirements.
-With its clean design, good ventilation, and comfortable space, the hall is perfect for working
-professionals, couples, and small families looking for a modern and well-maintained 1 BHK rental
-home in Ravet.
-           </p>
-              <a href="contact.html"> <button type="button">Register</button></a>
-            </div>
-          </div>
+</section>
+
+<!-- HALL SECTION END -->
+
+
+<!-- ================================================= -->
+<!-- BEDROOM SECTION START -->
+<!-- ================================================= -->
+
+<section class="property-section bg-primary text-white">
+
+  <div class="container">
+
+    <div class="row align-items-center">
+
+
+      <!-- Image -->
+
+      <div class="col-md-5 mb-3 mb-md-0">
+
+        <img
+          src="imeges/Ravet_kitchen.jpeg"
+          alt="Akurdi Apartment Bedroom"
+          class="property-img"
+        >
+
+      </div>
+
+
+      <!-- Content -->
+
+      <div class="col-md-7">
+
+        <div class="property-content">
+
+          <h2>
+            Cozy & Peaceful Bedroom
+          </h2>
+
+
+          <p>
+            The 1 BHK apartment in Akurdi features a comfortable and
+            spacious bedroom designed to provide a peaceful and
+            relaxing environment.
+          </p>
+
+
+          <p>
+            The room offers enough space for a double bed, wardrobe,
+            side tables, and other essential furniture while
+            maintaining a comfortable layout. The bedroom receives
+            good natural light and ventilation, creating a fresh and
+            pleasant atmosphere throughout the day.
+          </p>
+
+
+          <p>
+            Its simple and practical design makes it easy to
+            personalize the space according to your lifestyle and
+            preferences. Whether you are relaxing after a long day
+            or enjoying a peaceful night's sleep, the bedroom
+            provides the comfort and privacy you need.
+          </p>
+
         </div>
-       </section>
-       <!-- Hall section End -->
 
-    <!-- Bed section start -->
-       <section class="mt- bg-primary">
-        <div class="container-flued">
-          <div class="row">
-            <div class="col-md-5 p-3">
-              <img src="imeges/Ravet_kitchen.jpeg" alt="" class="img-fluid kitchen-img" />
-            </div>
-            <div class="col-md-7 p-3">
-              <h2>Cozy & Peaceful Bedroom</h2>
-             <p>  
-The 1 BHK apartment in Ravet features a comfortable and spacious bedroom designed to provide a 
-peaceful and relaxing environment. The room offers enough space for a double bed, wardrobe, side 
-tables, and other essential furniture while maintaining a comfortable layout. The bedroom receives
-good natural light and ventilation, creating a fresh and pleasant atmosphere throughout the day.
-Its simple and practical design makes it easy to personalize the space according to your lifestyle
-and preferences. Whether you are relaxing after a long day or enjoying a peaceful night's sleep,
-the bedroom provides the comfort and privacy you need. It is an ideal space for working 
-professionals, couples, and small families looking for a comfortable and well-maintained 1 BHK 
-rental home in Ravet.
+      </div>
 
-               </p>
-              
-            </div>
-          </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- BEDROOM SECTION END -->
+
+
+<!-- ================================================= -->
+<!-- KITCHEN SECTION START -->
+<!-- ================================================= -->
+
+<section class="property-section bg-success text-white">
+
+  <div class="container">
+
+    <div class="row align-items-center">
+
+
+      <!-- Image -->
+
+      <div class="col-md-5 mb-3 mb-md-0">
+
+        <img
+          src="imeges/Ravet_kitchen.jpeg"
+          alt="Akurdi Apartment Kitchen"
+          class="property-img"
+        >
+
+      </div>
+
+
+      <!-- Content -->
+
+      <div class="col-md-7">
+
+        <div class="property-content">
+
+          <h2>
+            Modern Kitchen
+          </h2>
+
+
+          <h5>
+            Modern Functional Kitchen
+          </h5>
+
+
+          <p>
+            The 1 BHK apartment in Akurdi features a spacious, modern,
+            and well-planned kitchen designed for comfortable everyday
+            cooking.
+          </p>
+
+
+          <p>
+            The kitchen provides sufficient counter space and storage
+            areas, making it easy to keep cooking essentials organized.
+            Good ventilation and natural light create a fresh and
+            comfortable environment while preparing meals.
+          </p>
+
+
+          <p>
+            The practical layout makes the kitchen suitable for both
+            daily cooking and occasional meal preparation for family
+            and guests. With its clean finish, convenient design, and
+            easy-to-maintain space, this kitchen adds to the overall
+            comfort of the apartment.
+          </p>
+
         </div>
-       </section>
-       <!--Bed section End -->
 
-       <!-- kitchen section start -->
-       <section class="mt- bg-success">
-        <div class="container-flued">
-          <div class="row">
-            <div class="col-md-5 p-3">
-              <img src="imeges/Ravet_kitchen.jpeg" alt="" class="img-fluid kitchen-img" />
-            </div>
-            <div class="col-md-7 p-3">
-              <h2> Modern Kitchen</h2>
-             <p>  
-                 Modern Functional Kitchen
-The 1 BHK apartment in Ravet features a spacious, modern, and well-planned kitchen designed for 
-comfortable everyday cooking. The kitchen provides sufficient counter space and storage areas,
-making it easy to keep cooking essentials organized. Good ventilation and natural light create a 
-fresh and comfortable environment while preparing meals. The practical layout makes the kitchen 
-suitable for both daily cooking and occasional meal preparation for family and guests. With its 
-clean finish, convenient design, and easy-to-maintain space, this kitchen adds to the overall 
-comfort of the apartment. It is an ideal choice for working professionals, couples, and small 
-families looking for a well-maintained 1 BHK rental home in Ravet.
-          
-            </p>
-              
-            </div>
-            <nav aria-label="Property pages"> <ul class="pagination justify-content-center"> 
-            <li class="page-item"> <a class="page-link" href="Ravet.html">Previous</a> </li>
-             <li class="page-item active"> <a class="page-link" href="Akurdi.html">2</a> </li> 
-            </ul>
-          </div>
-        </div> 
-       </section>
-       <!-- kitchen section End -->
+      </div>
 
-    
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
+    </div>
+
+
+    <!-- Pagination -->
+
+    <nav aria-label="Property pages">
+
+      <ul class="pagination justify-content-center">
+
+        <li class="page-item">
+
+          <a
+            class="page-link"
+            href="Ravet.html"
+          >
+            Previous
+          </a>
+
+        </li>
+
+
+        <li class="page-item active">
+
+          <a
+            class="page-link"
+            href="Akurdi.html"
+          >
+            2
+          </a>
+
+        </li>
+
+      </ul>
+
+    </nav>
+
+  </div>
+
+</section>
+
+<!-- KITCHEN SECTION END -->
+
+
+<!-- Bootstrap JavaScript -->
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+  crossorigin="anonymous">
+</script>
+
 </body>
 </html>
+```
